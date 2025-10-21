@@ -1,0 +1,129 @@
+
+/* src/index.css or src/App.css */
+/* @tailwind base;
+@tailwind components;
+
+@tailwind utilities; */
+
+/* ======================== */
+/* 💎 Shimmer Effect       */
+/* ======================== */
+.text-shimmer {
+    background: linear-gradient(
+        to right, 
+        #ffffff 0%, 
+        #e0e0ff 10%, 
+        #a5b4fc 20%, /* A light indigo/blue from Tailwind */
+        #ffffff 30%, 
+        #ffffff 70%, 
+        #a5b4fc 80%, 
+        #e0e0ff 90%, 
+        #ffffff 100%
+    );
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 5s linear infinite;
+}
+
+@keyframes shimmer {
+    to {
+        background-position: 200% center;
+    }
+}
+
+
+/* ======================== */
+/* ☁️ Cloud Animation       */
+/* ======================== */
+@keyframes cloud-move {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.cloud-animation {
+    /* Using Tailwind colors where possible (e.g., indigo-400, gray-600) for consistency */
+    background-image: 
+        radial-gradient(circle at 15% 50%, rgba(139, 92, 246, 0.4) 0%, transparent 40%), /* Tailwind indigo-400 */
+        radial-gradient(circle at 85% 60%, rgba(75, 85, 99, 0.3) 0%, transparent 35%), /* Tailwind gray-600 */
+        radial-gradient(circle at 50% 10%, rgba(129, 140, 248, 0.5) 0%, transparent 50%); /* Tailwind indigo-300 */
+    
+    background-size: 300% 300%;
+    filter: blur(80px);
+    animation: cloud-move 60s linear infinite alternate;
+}
+
+/* ======================== */
+/* 🌕 Moon Animation        */
+/* ======================== */
+@keyframes moon-pulse-glow {
+    0% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.2); }
+    50% { box-shadow: 0 0 25px rgba(255, 255, 255, 0.6), 0 0 50px rgba(255, 255, 255, 0.3); }
+    100% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.2); }
+}
+
+.moon-glow {
+    animation: moon-pulse-glow 8s ease-in-out infinite;
+}
+
+/* Subtle moon rotation for realism */
+@keyframes moon-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.moon-container {
+    animation: moon-rotate 120s linear infinite; /* Very slow rotation */
+}
+
+
+
+
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
